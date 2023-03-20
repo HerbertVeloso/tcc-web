@@ -8,16 +8,16 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   :root {
-    --white: #ffffff;
-    --black: #61dcfb;
-    --primary: #04d361;
-    --secondary: #eba417;
+    --white: #f5f6fa;
+    --black: #353b48;
+    --primary: #8c7ae6;
+    --secondary: #0097e6;
 
-    --title: #e1e1e6;
-    --text: #a8a8b3;
+    --title: #9c88ff;
+    --text: #dcdde1;
 
     --shape: #1f2729;
-    --background: #121414;
+    --background: #2f3640;
     --border: #29292e;
   }
 
@@ -60,6 +60,10 @@ export const GlobalStyles = createGlobalStyle`
   a {
     color: inherit;
     text-decoration: none;
+  }
+
+  ul, ol {
+    list-style: none;
   }
 
   [disabled] {

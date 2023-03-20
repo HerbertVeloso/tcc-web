@@ -5,13 +5,11 @@ import { GlobalStyles } from './styles/global';
 
 const queryClient = new QueryClient();
 
-function App() {
+export function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <GlobalStyles />
       <RouterProvider router={router} />
     </QueryClientProvider>
-  )
+  );
 }
-
-export default App

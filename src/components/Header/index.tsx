@@ -1,11 +1,14 @@
 import { Logo } from '../Logo';
 import { Navbar } from '../Navbar';
+import { Wrapper } from './styles';
 
 export function Header() {
   return (
-    <header>
-      <Logo />
+    <Wrapper>
+      <Logo
+        width='180px'
+      />
       <Navbar />
-    </header>
+    </Wrapper>
   );
 }

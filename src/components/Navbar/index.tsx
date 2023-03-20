@@ -1,6 +1,8 @@
+import { Wrapper } from './styles';
+
 export function Navbar() {
   return (
-    <nav>
+    <Wrapper>
       <ul>
         <li>Home</li>
         <li>Filmes</li>
@@ -8,6 +10,6 @@ export function Navbar() {
         <li>Programas de TV</li>
         <li>Jogos</li>
       </ul>
-    </nav>
+    </Wrapper>
   );
 }
