@@ -16,11 +16,16 @@ export const Wrapper = styled.div`
 
   > div {
     width: 100%;
-    height: 35%;
-    background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8)) 0 40%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7));
     padding: 12px;
     position: absolute;
-    bottom: 0;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
   }
 
   &:hover {
