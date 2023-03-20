@@ -15,14 +15,6 @@ export function HomePage() {
         />
 
         <MoviesSlide
-          label='Últimos lançamentos'
-          query={{
-            key: 'latest',
-            endpoint: '/movie/latest'
-          }}
-        />
-
-        <MoviesSlide
           label='Filmes bem avaliados'
           query={{
             key: 'top_rated',
