@@ -1,20 +1,23 @@
 import styled from 'styled-components';
+import { Header } from '../../components/Header';
 import { Freeway } from '../../games/Freeway';
 import Menu from '../../games/Freeway/Menu';
 import { ScoreProvider } from '../../games/Freeway/ScoreContext';
 
-export function GamesPage() {
+export function FreeWayPage() {
 
   return (
-    <Wrapper>
-      <h1>Games</h1>
-      <ScoreProvider>
-        <Container>
-          <Freeway />
-          <Menu />
-        </Container>
-      </ScoreProvider>
-    </Wrapper>
+    <>
+      <Header />
+      <Wrapper>
+        <ScoreProvider>
+          <Container>
+            <Freeway />
+            <Menu />
+          </Container>
+        </ScoreProvider>
+      </Wrapper>
+    </>
   );
 }
 
@@ -22,7 +25,7 @@ export function GamesPage() {
 const Wrapper = styled.div`
   width: 100%;
   max-width: 980px;
-  margin: 0 auto;
+  margin: 64px auto;
 `;
 
 const Container = styled.div`

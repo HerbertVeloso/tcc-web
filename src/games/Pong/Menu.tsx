@@ -7,7 +7,7 @@ export default function Menu() {
   const { score } = useContext(ScoreContext);
   return (
     <aside>
-      <Title>FreeWay Game</Title>
+      <Title>Pong Game</Title>
 
       <Points>Pontuação</Points>
       <PointsNumber>{score} pontos</PointsNumber>
