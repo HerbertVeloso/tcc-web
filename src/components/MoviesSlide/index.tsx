@@ -1,34 +1,22 @@
-import { useQuery } from '@tanstack/react-query';
-import { getApiData } from '../../utils/getData';
+import { MovieType } from '../../types/Movie';
 import { Slider } from '../Slider';
 import { SubTitle } from '../SubTitle';
 
 interface MoviesSlideProps {
   label: string;
-  query: {
-    key: string,
-    endpoint: string,
-  }
+  movies: MovieType[];
 }
 
-export function MoviesSlide({ label, query }: MoviesSlideProps) {
-  const { data: movies, isLoading, isError } = useQuery({
-    queryKey: [query.key],
-    queryFn: () => getApiData(query.endpoint),
-  });
-
+export function MoviesSlide({ label, movies }: MoviesSlideProps) {
   return (
     <section>
-      {isLoading && (
+      <SubTitle>{label}</SubTitle>
+      {movies.length === 0 ? (
         <p>Carregando...</p>
-      )}
-      {!isLoading && !isError && (
-        <>
-          <SubTitle>{label}</SubTitle>
-          <Slider
-            movies={movies}
-          />
-        </>
+      ) : (
+        <Slider
+          movies={movies}
+        />
       )}
     </section>
   );
