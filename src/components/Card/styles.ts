@@ -9,12 +9,13 @@ export const Wrapper = styled.div`
   position: relative;
   border-radius: 4px;
   overflow: hidden;
+  display: block;
 
   img {
     width: 100%;
   }
 
-  > div {
+ div {
     width: 100%;
     height: 100%;
     background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7));

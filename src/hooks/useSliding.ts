@@ -16,25 +16,21 @@ const useSliding = ({ elementWidth, countElements }: useSlidingProps) => {
 
   useEffect(() => {
     if (containerRef.current !== null) {
-      const containerWidth = containerRef.current.clientWidth - PADDINGS;
+      const cWidth = containerRef.current.clientWidth - PADDINGS;
 
-      setContainerWidth(containerWidth);
+      setContainerWidth(cWidth);
       setTotalInViewport(Math.floor(containerWidth / elementWidth));
     }
   }, [containerRef.current]);
 
   const handlePrev = () => {
-    // setViewed(viewed - totalInViewport);
-    // setDistance(distance + containerWidth);
-    setViewed(viewed + totalInViewport);
-    setDistance(distance - containerWidth);
+    setViewed(prev => prev + totalInViewport);
+    setDistance(prev => prev - (containerWidth - (containerWidth % elementWidth) + (totalInViewport * 6)));
   };
 
   const handleNext = () => {
-    // setViewed(viewed + totalInViewport);
-    // setDistance(distance - containerWidth);
-    setViewed(viewed - totalInViewport);
-    setDistance(distance + containerWidth);
+    setViewed(prev => prev - totalInViewport);
+    setDistance(prev => prev + (containerWidth - (containerWidth % elementWidth) + (totalInViewport * 6)));
   };
 
   const slideProps = {

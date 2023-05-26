@@ -33,21 +33,19 @@ export function HomePage() {
 
   return (
     <>
-      <>
-        <Header />
-        <MoviesSlide
-          label='Filmes populares'
-          movies={movies.popularMovies}
-        />
-        <MoviesSlide
-          label='Filmes bem avaliados'
-          movies={movies.topRatedMovies}
-        />
-        <MoviesSlide
-          label='Filmes em breve'
-          movies={movies.upcomingMovies}
-        />
-      </>
+      <Header />
+      <MoviesSlide
+        label='Filmes populares'
+        movies={movies.popularMovies}
+      />
+      <MoviesSlide
+        label='Filmes melhor avaliados'
+        movies={movies.topRatedMovies}
+      />
+      <MoviesSlide
+        label='Filmes que estão por vir'
+        movies={movies.upcomingMovies}
+      />
     </>
   );
 }

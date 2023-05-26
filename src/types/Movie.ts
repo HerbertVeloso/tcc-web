@@ -13,4 +13,8 @@ export interface MovieType {
   video: boolean;
   vote_average: number;
   vote_count: number;
+  results?: {
+    key: string;
+    name: string;
+  }[];
 }
