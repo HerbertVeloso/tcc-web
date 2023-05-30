@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import pong from '../../assets/images/pong.jpg';
 import snake from '../../assets/images/snake.jpg';
 import { Card } from '../../components/Card';
 import { Header } from '../../components/Header';
@@ -15,16 +16,11 @@ export function GamesPage() {
           title='Snake'
           image={snake}
         />
-        {/* <Card
+        <Card
           link='pong'
           title='Pong'
-          image='545'
+          image={pong}
         />
-        <Card
-          link='breakout'
-          title='BreakOut'
-          image='545'
-        /> */}
       </Container>
     </>
   );
@@ -32,7 +28,7 @@ export function GamesPage() {
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
   gap: 16px;
   margin: 16px 64px;
 
