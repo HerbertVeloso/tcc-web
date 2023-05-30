@@ -1,34 +1,42 @@
-// import styled from 'styled-components';
-// import { Header } from '../../components/Header';
-// import { Pong } from '../../games/Pong';
-// import Menu from '../../games/Pong/Menu';
-// import { ScoreProvider } from '../../games/Pong/ScoreContext';
+import styled from 'styled-components';
+import snake from '../../assets/images/snake.jpg';
+import { Card } from '../../components/Card';
+import { Header } from '../../components/Header';
+import { SubTitle } from '../../components/SubTitle';
 
 export function GamesPage() {
-
   return (
     <>
-      {/* <Header />
-      <Wrapper>
-        <ScoreProvider>
-          <Container>
-            <Pong />
-            <Menu />
-          </Container>
-        </ScoreProvider>
-      </Wrapper> */}
+      <Header />
+      <SubTitle>Jogos</SubTitle>
+      <Container>
+        <Card
+          link='snake'
+          title='Snake'
+          image={snake}
+        />
+        {/* <Card
+          link='pong'
+          title='Pong'
+          image='545'
+        />
+        <Card
+          link='breakout'
+          title='BreakOut'
+          image='545'
+        /> */}
+      </Container>
     </>
   );
 }
 
-// const Wrapper = styled.div`
-//   width: 100%;
-//   max-width: 980px;
-//   margin:64px auto;
-// `;
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+  margin: 16px 64px;
 
-// const Container = styled.div`
-//   display: grid;
-//   grid-template-columns: 600px 1fr;
-//   gap: 32px;
-// `;
+  >div {
+    max-width: 100%;
+  }
+`;

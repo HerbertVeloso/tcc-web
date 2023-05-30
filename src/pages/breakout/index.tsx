@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import { Header } from '../../components/Header';
-// import { Freeway } from '../../games/Freeway';
+// import { BreakOut } from '../../games/BreakOut';
 // import Menu from '../../games/Freeway/Menu';
 // import { ScoreProvider } from '../../games/Freeway/ScoreContext';
 
-export function FreeWayPage() {
+export function BreakOutPage() {
 
   return (
     <>
@@ -12,7 +12,7 @@ export function FreeWayPage() {
       <Wrapper>
         {/* <ScoreProvider> */}
         <Container>
-          {/* <Freeway /> */}
+          {/* <BreakOut /> */}
           {/* <Menu /> */}
         </Container>
         {/* </ScoreProvider> */}

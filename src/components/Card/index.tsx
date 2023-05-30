@@ -1,23 +1,25 @@
 import { forwardRef } from 'react';
 import { Link } from 'react-router-dom';
-import { MovieType } from '../../types/Movie';
 import { Wrapper } from './styles';
 
-interface CardProps {
-  movie: MovieType;
-}
+type CardProps = {
+  link: string;
+  image: string;
+  title: string;
+};
 
-export const Card = forwardRef<HTMLDivElement, CardProps>(({ movie }: CardProps, ref) => {
+export const Card = forwardRef<HTMLDivElement, CardProps>(({ link, image, title }: CardProps, ref) => {
   return (
     <Wrapper
       ref={ref}
     >
-      <Link to={`/movie/${movie.id}`}>
+      <Link to={link}>
         <img
-          src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
+          src={image}
+          alt={title}
         />
         <div>
-          <strong>{movie.title}</strong>
+          <strong>{title}</strong>
         </div>
       </Link>
     </Wrapper>

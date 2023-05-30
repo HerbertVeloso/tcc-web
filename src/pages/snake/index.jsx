@@ -1,26 +1,19 @@
 import styled from 'styled-components';
 import { Header } from '../../components/Header';
-// import { Freeway } from '../../games/Freeway';
-// import Menu from '../../games/Freeway/Menu';
-// import { ScoreProvider } from '../../games/Freeway/ScoreContext';
+import Snake from '../../games/Snake';
 
-export function FreeWayPage() {
-
+export function SnakePage() {
   return (
     <>
       <Header />
       <Wrapper>
-        {/* <ScoreProvider> */}
         <Container>
-          {/* <Freeway /> */}
-          {/* <Menu /> */}
+          <Snake />
         </Container>
-        {/* </ScoreProvider> */}
       </Wrapper>
     </>
   );
 }
-
 
 const Wrapper = styled.div`
   width: 100%;

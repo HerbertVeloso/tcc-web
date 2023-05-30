@@ -55,7 +55,9 @@ export function Slider({ movies }: SliderProps) {
             {movies.map((movie: MovieType) => (
               <Card
                 key={movie.id}
-                movie={movie}
+                link={`/movie/${movie.id}`}
+                image={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
+                title={movie.title}
                 ref={elementRef}
               />
             ))}
