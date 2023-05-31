@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 
-interface LogoProps {
-  width: string
-}
-
-export function Logo({ width }: LogoProps) {
+export function Logo({ width }) {
   return (
     <Wrapper
       width={width}
@@ -24,7 +20,7 @@ export function Logo({ width }: LogoProps) {
 }
 
 
-const Wrapper = styled.svg<LogoProps>`
+const Wrapper = styled.svg`
   width: ${({ width }) => width};
 
   path {

@@ -2,16 +2,9 @@ import { useEffect, useState } from 'react';
 import { Header } from '../../components/Header';
 import { MoviesSlide } from '../../components/MoviesSlide';
 import MoviesRepository from '../../repositories/MoviesRepository';
-import { MovieType } from '../../types/Movie';
-
-type MoviesData = {
-  popularMovies: MovieType[];
-  topRatedMovies: MovieType[];
-  upcomingMovies: MovieType[];
-}
 
 export function HomePage() {
-  const [movies, setMovies] = useState<MoviesData>({
+  const [movies, setMovies] = useState({
     popularMovies: [],
     topRatedMovies: [],
     upcomingMovies: [],

@@ -2,13 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 
 const PADDINGS = 64;
 
-interface useSlidingProps {
-  elementWidth: number;
-  countElements: number;
-}
-
-const useSliding = ({ elementWidth, countElements }: useSlidingProps) => {
-  const containerRef = useRef<HTMLDivElement>(null);
+const useSliding = ({ elementWidth, countElements }) => {
+  const containerRef = useRef(null);
   const [containerWidth, setContainerWidth] = useState(0);
   const [distance, setDistance] = useState(0);
   const [totalInViewport, setTotalInViewport] = useState(0);

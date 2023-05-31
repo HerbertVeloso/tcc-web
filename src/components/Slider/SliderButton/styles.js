@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 
-interface WrapperProps {
-  direction: 'next' | 'prev';
-}
-
-export const Wrapper = styled.button<WrapperProps>`
+export const Wrapper = styled.button`
   width: 64px;
   height: calc(100% - 64px);
   position: absolute;

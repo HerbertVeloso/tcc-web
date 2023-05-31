@@ -2,11 +2,10 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Header } from '../../components/Header';
 import MoviesRepository from '../../repositories/MoviesRepository';
-import { MovieType } from '../../types/Movie';
 import { Container, MainVideo, Wrapper } from './style';
 
 export function MoviePage() {
-  const [movie, setMovie] = useState<MovieType | undefined>(undefined);
+  const [movie, setMovie] = useState(undefined);
   const { id } = useParams();
 
   useEffect(() => {
